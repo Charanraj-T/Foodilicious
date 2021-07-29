@@ -8,7 +8,7 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
     
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -18,6 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     
+    <link rel="icon" type="image/png" sizes="32x32" href="./pictures/favicon-32x32.png">
     <title>Foodilicious</title>
 </head>
 <body>
@@ -48,7 +49,7 @@
     <!-- home page -->
     <section id="home" class="bg-dark text-white">
         <h1 class="main-heading ">Foodilicious</h1>
-        <h3 class="sub-heading m-4">Welcome to the little heaven in the world!</h3>
+        <h3 class="h3 sub-heading m-4">Welcome to the little heaven in the world!</h3>
         <a class="btn btn-outline-light btn-lg p-3 m-3" href="#order">Order Food</a>
         <a class="btn btn-outline-light btn-lg p-3 m-3" href="#table">Book a table</a>
         <a class="btn btn-outline-light btn-lg p-3 m-3" href="#events">Register event</a>
@@ -87,7 +88,41 @@
     <div id="events"></div>
 
     <!-- table -->
-    <div id="table"></div>
+    <section id="table" class="container-fluid bg-custom">
+        <h1 class="h1">Book a table</h1>
+        <p>Mark your visiting and earn your memory</p>
+        <form id="tableform"> 
+            <div class="row">
+                <div class="col-lg-4 col-md-6 my-3">
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="col-lg-4 col-md-6 my-3">
+                    <input type="text" class="form-control" id="phone" placeholder="Phone">
+                </div>
+                <div class="col-lg-4 col-md-6 my-3">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>    
+                <div class="col-lg-4 col-md-6 my-3">
+                    <input type="text" class="form-control" id="date" placeholder="Date" onfocus="(this.type='date')">
+                </div>
+                <div class="col-lg-4 col-md-6 my-3">
+                    <input type="text" class="form-control" id="time" placeholder="Time" onfocus="(this.type='time')">
+                </div>
+                <div class="col-lg-4 col-md-6 my-3">
+                    <input type="number" class="form-control" id="no" placeholder="No of people">
+                </div>    
+            </div>
+            <div class="my-3">
+                <textarea rows="4" class="form-control" id="message" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark btn-outline-light btn-lg my-3" onclick=tabsend(event);>Make a seat</button>
+        </form>
+        <div class="bookres p-5 hidden">
+            <i class="fas fa-check-circle fa-5x"></i>
+            <h3 class="h3 p-3">Thanks for your registration!</h3>
+            <p>Your place is reserved. Don't forget to taste our special items.</p>
+        </div>                
+    </section>
 
     <!-- contact -->
     <section id="contact" class="bg-dark text-white">
@@ -95,22 +130,22 @@
             <div class="col-lg-4">
                 <div class="citem">
                     <i class="cicon far fa-2x fa-map-marker-alt"></i>
-                    <h5>Location:</h5>
+                    <h4 class="h4">Location:</h4>
                     <p>F14,Lovers street,Paris</p>
                 </div>
                 <div class="citem">
                     <i class="cicon far fa-2x fa-clock"></i>
-                    <h5>Open Hours:</h5>
+                    <h4 class="h4">Open Hours:</h4>
                     <p>Daily: 09:00 AM-06:00 PM</p>
                 </div>
                 <div class="citem">
                     <i class="cicon far fa-2x fa-envelope"></i>
-                    <h5>Email:</h5>
+                    <h4 class="h4">Email:</h4>
                     <p>Foodilicious@gmail.com</p>
                 </div>
                 <div class="citem">
                     <i class="cicon far fa-2x fa-phone"></i>
-                    <h5>Call:</h5>
+                    <h4 class="h4">Call:</h4>
                     <p>+331 90 80 70 60</p>
                 </div>
             </div>
@@ -138,7 +173,7 @@
                 </form>
                 <div class="detailres p-5 hidden">
                     <i class="fas fa-check-circle fa-5x"></i>
-                    <h3 class="p-3">Thanks for your feedback!</h3>
+                    <h3 class="p-3 h3">Thanks for your feedback!</h3>
                     <p>If you face any other problems,feel free to inform us.</p>
                 </div>                
             </div>
@@ -153,7 +188,7 @@
             <i class="social-icon fab fa-2x fa-instagram"></i>
             <i class="social-icon fab fa-2x fa-whatsapp"></i>
             <i class="social-icon far fa-2x fa-envelope"></i>
-            <p>© Copyright 2021 Foodilicious</p>                
+            <p>© Copyright 2021 <span class="bname">Foodilicious</span></p>                
         </div>
     </footer>
     <script>
@@ -162,6 +197,12 @@
             document.querySelector("#msgform").reset();
             document.querySelector("#msgform").classList.add("hidden");
             document.querySelector(".detailres").classList.remove("hidden");
+        }
+        function tabsend(event){
+            event.preventDefault();
+            document.querySelector("#tableform").reset();
+            document.querySelector("#tableform").classList.add("hidden");
+            document.querySelector(".bookres").classList.remove("hidden");
         }
     </script>
 </body>
