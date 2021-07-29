@@ -4,6 +4,16 @@ body{
 
 .container-fluid{
     text-align: center;
+    padding:7% 15%;
+}
+
+.bg-custom{
+    background-color:#EEEBDD;
+    background-image: url(./pictures/bright-squares.png);
+}
+
+.hidden{
+    display: none;
 }
 
 /* navbar styles */
@@ -43,6 +53,55 @@ body{
 
 .sub-heading,#home .btn{
     font-size:1.5rem;
+}
+
+/* about */
+
+.abox{
+    padding:4%;
+}
+
+.atitle{
+    padding:20px;
+}
+
+/* contact */
+
+.details{
+    padding:4% 8%;
+}
+
+.citem h5,.citem p{
+    padding:0 0 0 60px;
+}
+
+.citem h5{
+    font-weight: bolder;
+    color:#FFD523;
+}
+
+.cicon{
+    font-size: 25px;
+    color: black;
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: #eeebdd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.detailres{
+    text-align: center;
+}
+
+hr{
+    height:3px;
+    margin:0 auto;
+    width:80%;
+    color:white;
 }
 
 /* footer  */
