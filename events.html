@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="./pictures/favicon-32x32.png">
+    <title>Foodilicious</title>
+</head>
+<body>
+
+    <div class="eventreg text-white">
+        <h1>Event registration</h1>
+        <form id="eventregform"> 
+            <div class="row">
+                <div class="col-lg-4 col-md-6 my-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="col-lg-4 col-md-6 my-3">
+                    <label for="phone">Phone no</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone no">
+                </div>
+                <div class="col-lg-4 col-md-6 my-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>    
+                <div class="col-lg-4 col-md-6 my-3">
+                    <label for="date">Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+                <div class="col-lg-4 col-md-6 my-3">
+                    <label for="type">Party type</label>
+                    <select class="form-select" id="type" aria-label="Default select example">
+                        <option value="1">Birthday</option>
+                        <option value="2">Wedding</option>
+                        <option value="3">Custom</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-6 my-3">
+                    <label for="no">No of people</label>
+                    <input type="number" class="form-control" id="no" placeholder="Enter people count">
+                </div>    
+            </div>
+            <div class="my-3">
+                <label for="message">Party needs</label>
+                <textarea rows="4" class="form-control" id="message" placeholder="Enter things you need extra in party"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-outline-warning btn-lg mt-5 mx-3 btn-custom" onclick=evesend(event);>Register an event</button>
+                <a href="./index.html" class="btn btn-outline-warning btn-lg mt-5 mx-3 btn-custom">Go to homepage</a>
+            </div>
+        </form>
+        <div class="everegres p-5 hidden text-center">
+            <i class="fas fa-check-circle fa-5x"></i>
+            <h3 class="h3 p-3">Thanks for your registration!</h3>
+            <p>Your event booking is success!</p>
+            <p>Tell about us to your friends!</p>
+            <p>Register more events!</p>
+            <a href="./index.html" class="btn btn-outline-warning btn-lg my-5 mx-3">Go to homepage</a>
+        </div>
+    </div>
+    <script>
+        function evesend(event){
+            event.preventDefault();
+            document.querySelector("#eventregform").reset();
+            document.querySelector("#eventregform").classList.add("hidden");
+            document.querySelector(".everegres").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>

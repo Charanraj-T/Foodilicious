@@ -21,6 +21,11 @@ h1,h2,h3,h4,h5,h6{
     display: none;
 }
 
+.btn-custom{
+    font-weight:bolder;
+    font-size: x-large;
+}
+
 /* navbar styles */
 
 .navbar-brand{
@@ -70,8 +75,46 @@ h1,h2,h3,h4,h5,h6{
     padding:20px;
 }
 
-/* table */
+/* events */
 
+#events,.edetail{
+    padding: 5%;
+}
+
+#events h1{
+    text-align: center;
+    margin-top:50px;
+}
+
+.etitle,.edetail h1,.ethings p{
+    color: #FFD523;
+}
+
+.parallax {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),url(./pictures/events-bg.jpg);
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ethings li{
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.ethings p{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.eimage{
+    padding:5%;
+}
 
 /* contact */
 
@@ -124,4 +167,35 @@ footer .container-fluid{
 
 .bname{
     font-family: 'Montserrat', sans-serif;
+}
+
+/* event registration */
+
+.eventreg{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),url(./pictures/events-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding:3% 6%;
+    min-height: 100vh;
+}
+
+.eventreg h1{
+    font-family: cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: #FFD523;
+}
+
+.eventreg label{
+    color: #FFD523;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+#eventregform{
+    padding:5%;
 }
