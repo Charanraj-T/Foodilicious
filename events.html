@@ -74,12 +74,15 @@
             <a href="./index.html" class="btn btn-outline-warning btn-lg my-5 mx-3">Go to homepage</a>
         </div>
     </div>
+    <!-- jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <script>
         function evesend(event){
             event.preventDefault();
-            document.querySelector("#eventregform").reset();
-            document.querySelector("#eventregform").classList.add("hidden");
-            document.querySelector(".everegres").classList.remove("hidden");
+            $("#eventregform").trigger("reset");
+            $("#eventregform").addClass("hidden");
+            $(".everegres").removeClass("hidden");
         }
     </script>
 </body>

@@ -36,11 +36,12 @@
                         <a class="nav-item nav-link" href="#home">Home</a>
                         <a class="nav-item nav-link" href="#about">About</a>
                         <a class="nav-item nav-link" href="#menu">Menu</a>
-                        <a class="nav-item nav-link" href="#order">Order</a>
+                        <a class="nav-item nav-link" href="#specials">Specials</a>
                         <a class="nav-item nav-link" href="#events">Events</a>
+                        <a class="nav-item nav-link" href="#table">Table</a>
                         <a class="nav-item nav-link" href="#contact">Contact</a>
                     </div>
-                    <a class="btn btn-dark btn-outline-light btn-lg ms-auto" href="#table">Book a table</a>
+                    <a class="btn btn-dark btn-outline-light btn-lg ms-auto" href="./order.html">Order food</a>
                 </div>
             </div>
         </nav>    
@@ -50,9 +51,9 @@
     <section id="home" class="bg-dark text-white">
         <h1 class="main-heading ">Foodilicious</h1>
         <h3 class="h3 sub-heading m-4">Welcome to the little heaven in the world!</h3>
-        <a class="btn btn-outline-light btn-lg p-3 m-3" href="#order">Order Food</a>
+        <a class="btn btn-outline-light btn-lg p-3 m-3" href="./order.html">Order Food</a>
         <a class="btn btn-outline-light btn-lg p-3 m-3" href="#table">Book a table</a>
-        <a class="btn btn-outline-light btn-lg p-3 m-3" href="#events">Register event</a>
+        <a class="btn btn-outline-light btn-lg p-3 m-3" href="./events.html">Register event</a>
     </section>
 
     <!-- about  -->
@@ -79,10 +80,191 @@
     </section>
 
     <!-- menu  -->
-    <div id="menu"></div>
+    <section id="menu" class="parallax">
+        <h1 class="h1 p-3 text-white">Check our tasty <span class="mtitle">menu</span>!</h1>
+        <div class="row text-center">
+            <ul id="m" class="mmenu p-4 text-white">
+                <li id="mall" class="px-2 active" onclick="fmenu('all')">All</li>
+                <li id="mfood" class="px-2" onclick="fmenu('food')">Food</li>
+                <li id="mdrinks" class="px-2" onclick="fmenu('drinks')">Drinks</li>
+                <li id="msnacks" class="px-2" onclick="fmenu('snacks')">Snacks</li>
+            </ul>
+        </div>
+        <div class="menu-items text-center">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-6 fitem food">
+                    <div class="card">
+                        <img src="./pictures/menu/briyani.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Briyani</h5>
+                          <p class="card-text mprice">&#8377; 70</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem drinks">
+                    <div class="card">
+                        <img src="./pictures/menu/mojito.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Mojito</h5>
+                          <p class="card-text mprice">&#8377; 50</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem snacks">
+                    <div class="card">
+                        <img src="./pictures/menu/sandwich.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Sandwich</h5>
+                          <p class="card-text mprice">&#8377; 30</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem food">
+                    <div class="card">
+                        <img src="./pictures/menu/fried rice.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Fried rice</h5>
+                          <p class="card-text mprice">&#8377; 70</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem drinks">
+                    <div class="card">
+                        <img src="./pictures/menu/milkshake.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Milkshake</h5>
+                          <p class="card-text mprice">&#8377; 20</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem snacks">
+                    <div class="card">
+                        <img src="./pictures/menu/puffs.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Puffs</h5>
+                          <p class="card-text mprice">&#8377; 20</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem food">
+                    <div class="card">
+                        <img src="./pictures/menu/noodles.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Noodles</h5>
+                          <p class="card-text mprice">&#8377; 50</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem drinks">
+                    <div class="card">
+                        <img src="./pictures/menu/rosemilk.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Rosemilk</h5>
+                          <p class="card-text mprice">&#8377; 20</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem snacks">
+                    <div class="card">
+                        <img src="./pictures/menu/chicken fry.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Chicken fry</h5>
+                          <p class="card-text mprice">&#8377; 90</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem food">
+                    <div class="card">
+                        <img src="./pictures/menu/meals.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Full meals</h5>
+                          <p class="card-text mprice">&#8377; 90</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem drinks">
+                    <div class="card">
+                        <img src="./pictures/menu/soup.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Soup</h5>
+                          <p class="card-text mprice">&#8377; 30</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 fitem snacks">
+                    <div class="card">
+                        <img src="./pictures/menu/showarma.jfif" class="card-img-top embed-responsive-16by9" alt="food">
+                        <div class="card-body bg-custom">
+                          <h5 class="card-title h5">Showarma</h5>
+                          <p class="card-text mprice">&#8377; 80</p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="text-center p-5">
+                <a href="./order.html" class="btn btn-outline-warning btn-custom">Order food</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- order  -->
-    <div id="order"></div>
+    <section id="specials" class="bg-custom">
+        <h1 class="h1 pb-5">Try our restaurant <span class="mtitle">specials</span>!</h1>
+        <div class="row">
+            <div class="col-lg-3 snames">
+                <ul>
+                    <li id="s1" class="btn btn-dark btn-outline-warning w-100" onclick="show23()">Neopolitan pizza</li>
+                    <li id="s2" class="btn btn-dark btn-outline-light w-100" onclick="show13()">Piri piri chicken</li>
+                    <li id="s3" class="btn btn-dark btn-outline-light w-100" onclick="show12()">Lasagna</li>
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <div  id="sitem1" class="row">
+                    <div class="col-lg-5">
+                        <img src="./pictures/special/neopolitan.jpg" class="d-block w-100" alt="special">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="h2 text-center stitle">Neopolitan pizza</h2>
+                        <h3 class="h3 p-3">Rs.1000/-</h3>
+                        <div class="p-3">
+                            <p>The best pizza was and still is the simple Neapolitan, an invention now protected
+                            by its own trade association that insists on sea salt, high-grade wheat flour, the
+                            use of only three types of fresh tomatoes, hand-rolled dough and the strict use of
+                            a wood-fired oven, among other quality stipulations. </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="sitem2" class="row hidden">
+                    <div class="col-lg-5">
+                        <img src="./pictures/special/piri piri.jpg" class="d-block w-100" alt="special">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="h2 text-center stitle">Piri piri chicken</h2>
+                        <h3 class="h3 p-3">Rs.200/-</h3>
+                        <div class="p-3">
+                            <p>The South African restaurant chain Nando's has made Mozambican-Portuguese
+                            piri-piri chicken loved around the world. But for the original dish, head to Maputo,
+                            capital of Mozambique. Galinha à Zambeziana is a finger-lickin' feast of chicken cooked
+                            with lime, pepper, garlic, coconut milk and piri piri sauce.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="sitem3" class="row hidden">
+                    <div class="col-lg-5">
+                        <img src="./pictures/special/lasagna.jpg" class="d-block w-100" alt="special">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="h2 text-center stitle">Lassagna</h2>
+                        <h3 class="h3 p-3">Rs.300/-</h3>
+                        <div class="p-3">
+                            <p>Second only to pizza in the list of famed Italian foods, there's a reason this
+                                pasta-layered, tomato-sauce-infused, minced-meaty gift to kids and adults alike is
+                                so popular -- it just works.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- events  -->
     <section id="events" class="parallax text-white">
@@ -276,19 +458,9 @@
             <p>© Copyright 2021 <span class="bname">Foodilicious</span></p>                
         </div>
     </footer>
-    <script>
-        function msgsend(event){
-            event.preventDefault();
-            document.querySelector("#msgform").reset();
-            document.querySelector("#msgform").classList.add("hidden");
-            document.querySelector(".detailres").classList.remove("hidden");
-        }
-        function tabsend(event){
-            event.preventDefault();
-            document.querySelector("#tableform").reset();
-            document.querySelector("#tableform").classList.add("hidden");
-            document.querySelector(".bookres").classList.remove("hidden");
-        }
-    </script>
+    
+    <!-- jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
