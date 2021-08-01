@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .nav-item{
-    margin:auto 12px;
+    margin:auto 5px;
     font-size: 1.2rem;
 }
 
@@ -265,4 +265,42 @@ footer .container-fluid{
 
 #eventregform{
     padding:5%;
+}
+
+/* order food  */
+
+#otop{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),url(./pictures/homepage.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    padding:4% 8%;
+    text-align: center;
+}
+
+#otop h1,.otitle{
+    color: #FFD523;
+}
+
+#omenu,#ocart{
+    padding:5%;
+}
+
+table{
+    font-size: 1.2rem;
+}
+
+table td:last-of-type{
+    text-align: center;
+}
+
+#tprice{
+    text-align: right;
+}
+
+#orderform label{
+    font-size: 1.5rem;
 }
